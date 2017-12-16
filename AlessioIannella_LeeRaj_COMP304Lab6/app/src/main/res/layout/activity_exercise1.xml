@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alessioiannella_leeraj_comp304lab6.activities.Exercise1Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewExercise1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="left"
+                android:textAlignment="viewStart"
+                android:text="@string/enter_start_and_end_address" />
+
+            <EditText
+                android:id="@+id/editTextExercise1StartAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/start_address"/>
+            <TextView
+                android:id="@+id/textViewErrorStartAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="start"
+                android:text="@string/please_insert_a_start_address"
+                android:textColor="@color/red"
+                android:visibility="gone"/>
+
+
+            <EditText
+                android:id="@+id/editTextExercise1EndAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/end_address"/>
+            <TextView
+                android:id="@+id/textViewErrorEndAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/please_insert_a_start_address"
+                android:textColor="@color/red"
+                android:layout_gravity="start"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonExercise1Directions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/get_directions"
+                android:onClick="handleOnClickGetDirections"/>
+
+            <TextView
+                android:id="@+id/textViewErrorDirections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="start"
+                android:text="@string/error_getting_directions_please_try_again"
+                android:textColor="@color/red"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/textViewDirections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutExercise1Loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</FrameLayout>
