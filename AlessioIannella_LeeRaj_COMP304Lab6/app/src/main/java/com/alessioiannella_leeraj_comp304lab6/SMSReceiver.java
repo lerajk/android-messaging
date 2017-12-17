@@ -1,4 +1,4 @@
-package com.alessioiannella_leeraj_comp304lab6.receivers;
+package com.alessioiannella_leeraj_comp304lab6;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
